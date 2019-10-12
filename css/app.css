@@ -1,0 +1,39 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+main{
+    text-align: center;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: #0095DD;
+    color: #fff;
+    padding: 1%;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1.2px;
+    margin-top: 1%;
+}
+
+/*
+=========================
+        GAME STYLES
+=========================
+*/
+
+canvas {
+    background: #eee;
+    display: block;
+    margin: 0 auto;
+}
