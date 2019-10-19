@@ -4,7 +4,7 @@ This is the game breakout in 2D created using JavaScript and HTML canvas. Use th
 
 ![Breakout 2D gif](./gif/Breakout-2D.gif)
 
-[View live demo here](https://breakout-2d-jp.herokuapp.com/index.html)
+[View the live demo here](https://breakout-2d-jp.herokuapp.com/index.html)
 
 To run this project on your PC follow the steps below.
 
