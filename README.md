@@ -6,6 +6,8 @@ This is the game breakout in 2D created using JavaScript and HTML canvas. Use th
 
 [View the live demo](https://breakout-2d-jp.herokuapp.com/index.html)
 
+If you'd like to view my portfolio, [Click here](https://jasonpallone.com)
+
 To run this project on your PC follow the steps below.
 
 1. Clone this repo to your PC using git clone.
