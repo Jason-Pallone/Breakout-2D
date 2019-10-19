@@ -5,7 +5,9 @@ let rightPressed = false;
 let leftPressed = false;
 const paddleHeight = 10;
 const paddleWidth = 75;
+/* the paddles x coordinate */
 let paddleX = (canvas.width - paddleWidth) / 2;
+/* the ball radius & its x and y coordinates , dx and dy are used for ball movement and detection */
 const ballRadius = 10;
 let x = canvas.width/2;
 let y = canvas.height-30;
@@ -89,13 +91,13 @@ function collisionDetection(){
     for(let r=0; r<brickRowCount; r+=1){
       let b = bricks[c][r];
       if(b.status == 1)
-      if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight ){
-        dy = -dy;
-        b.status = 0;
-        score += 1;
-        if(score == brickRowCount * brickColumnCount){
-          alert(`YOU WIN, CONGRATULATIONS! Your total score was ${score}!`);
-          document.location.reload();
+        if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight ){
+          dy = -dy;
+          b.status = 0;
+          score += 1;
+          if(score == brickRowCount * brickColumnCount){
+            alert(`YOU WIN, CONGRATULATIONS! Your total score was ${score}!`);
+            document.location.reload();
         }
       }
     }
@@ -142,13 +144,14 @@ function draw(){
   drawLives();
   collisionDetection();
 
-
+  /* checks the ball x and y coordinates to see if its hitting the top/bottom or sides of the canvas */
   if(x + dx > canvas.width-ballRadius || x + dx < ballRadius){
     dx = -dx;
   }
   if(y + dy < ballRadius) {
     dy = -dy;
-  }
+  }  /* checks to see if the ball is at the bottom of the canvas and if it hit the paddle,
+   if it did not hit the paddle, the ball & paddle reset and the player loses 1 life */
   else if(y + dy > canvas.height-ballRadius){
       if(x > paddleX && x < paddleX+paddleWidth){
           dy = -dy;
@@ -159,7 +162,7 @@ function draw(){
           alert("GAME OVER");
           document.location.reload();
         }
-       else {
+        else {
          x = canvas.width / 2;
          y = canvas.height - 30;
          dx = 3;
@@ -168,7 +171,7 @@ function draw(){
        }
       }
   };
-/* paddle movement */
+/* paddle movement and checks to see if paddle is going outside canvas width */
   if(rightPressed){
     paddleX += 3;
     if(paddleX + paddleWidth > canvas.width){
