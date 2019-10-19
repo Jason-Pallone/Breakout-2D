@@ -1,6 +1,6 @@
 # Breakout-2D
 
-This is the game breakout in 2D created using JavaScript and HTML canvas, the game keeps track of player lives and the current score. There is a message for when you win the game or if you lose.
+This is the game breakout in 2D created using JavaScript and HTML canvas. Use the ball and paddle to break the bricks! Each brick you break gives you 1 point towards your overall score. Break all the bricks to win the game! The game keeps track of player lives and the current score. There is a message for when you win the game or if you lose.
 
 To run this project on your PC follow the steps below.
 
