@@ -1,6 +1,7 @@
 const btn = document.querySelector("button");
 const canvas =  document.querySelector("#game-canvas");
 const ctx = canvas.getContext("2d");
+const main = document.querySelector("main")
 let rightPressed = false;
 let leftPressed = false;
 
@@ -63,7 +64,7 @@ function draw(){
       else {
         lives -= 1;
         if(!lives){
-          alert("GAME OVER");
+          alert(`GAME OVER! Your score was ${score}`)
           document.location.reload();
         }
         else {
@@ -98,5 +99,4 @@ btn.addEventListener('click', (e)=>{
   e.target.remove()
   draw()
 });
-
 
